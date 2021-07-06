@@ -122,7 +122,7 @@
     <p>Add a contextmenu to the map or markers/vector layers.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>addContextmenu</span><span class='op'>(</span><span class='va'>map</span><span class='op'>)</span></pre>
+    <div class="ref-usage sourceCode"><pre class='sourceCode r'><code><span class='fu'>addContextmenu</span><span class='op'>(</span><span class='va'>map</span><span class='op'>)</span></code></pre></div>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -140,7 +140,7 @@
 
     <p>This function is only used to include the required JavaScript and CSS
 bindings and to set up some Shiny event handlers.</p>
-<h3 class='hasAnchor' id='contextmenu-initialization'><a class='anchor' href='#contextmenu-initialization'></a>Contextmenu initialization</h3>
+<h3 class='hasAnchor' id='contextmenu-initialization'><a class='anchor' aria-hidden='true' href='#contextmenu-initialization'></a>Contextmenu initialization</h3>
 <p>The contextmenu for</p><ul>
 <li><p>the <strong>map</strong> must be defined in <code><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leafletOptions</a></code>.</p></li>
 <li><p>the <strong>markers/vector layers</strong> must be defined in <code><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>markerOptions</a></code>
@@ -148,7 +148,7 @@ bindings and to set up some Shiny event handlers.</p>
 </ul>
 
 
-<h3 class='hasAnchor' id='contextmenu-selection'><a class='anchor' href='#contextmenu-selection'></a>Contextmenu selection</h3>
+<h3 class='hasAnchor' id='contextmenu-selection'><a class='anchor' aria-hidden='true' href='#contextmenu-selection'></a>Contextmenu selection</h3>
 <p>When a contextmenu is selected, a Shiny input with the ID <code>"MAPID_contextmenu_select"</code>
 is set (`MAPID` refers to the map's id).</p>
 <p>If the selected contextmenu item is triggered from:</p><ul>
@@ -167,6 +167,9 @@ is set (`MAPID` refers to the map's id).</p>
 
     <div class='dont-index'><p>Other Contextmenu Functions: 
 <code><a href='addItemContextmenu.html'>addItemContextmenu</a>()</code>,
+<code><a href='context_mapmenuItems.html'>context_mapmenuItems</a>()</code>,
+<code><a href='context_markermenuItems.html'>context_markermenuItems</a>()</code>,
+<code><a href='context_menuItem.html'>context_menuItem</a>()</code>,
 <code><a href='hideContextmenu.html'>hideContextmenu</a>()</code>,
 <code><a href='insertItemContextmenu.html'>insertItemContextmenu</a>()</code>,
 <code><a href='mapmenuItems.html'>mapmenuItems</a>()</code>,
@@ -178,31 +181,31 @@ is set (`MAPID` refers to the map's id).</p>
 <code><a href='showContextmenu.html'>showContextmenu</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://rstudio.github.io/leaflet/'>leaflet</a></span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span><span class='op'>(</span>options <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leafletOptions</a></span><span class='op'>(</span>
-    contextmenu <span class='op'>=</span> <span class='cn'>TRUE</span>,
-    contextmenuWidth <span class='op'>=</span> <span class='fl'>200</span>,
-    contextmenuItems <span class='op'>=</span>
-     <span class='fu'><a href='mapmenuItems.html'>mapmenuItems</a></span><span class='op'>(</span>
-       <span class='fu'><a href='menuItem.html'>menuItem</a></span><span class='op'>(</span><span class='st'>"Zoom Out"</span>, <span class='st'>"function(e) {this.zoomOut()}"</span>, disabled<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>,
-       <span class='st'>"-"</span>,
-       <span class='fu'><a href='menuItem.html'>menuItem</a></span><span class='op'>(</span><span class='st'>"Zoom In"</span>, <span class='st'>"function(e) {this.zoomIn()}"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addTiles</a></span><span class='op'>(</span>group <span class='op'>=</span> <span class='st'>"base"</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>addContextmenu</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addMarkers</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>breweries91</span>, label <span class='op'>=</span> <span class='op'>~</span><span class='va'>brewery</span>,
-          layerId <span class='op'>=</span> <span class='op'>~</span><span class='va'>founded</span>, group <span class='op'>=</span> <span class='st'>"marker"</span>,
-          options <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>markerOptions</a></span><span class='op'>(</span>
-            contextmenu <span class='op'>=</span> <span class='cn'>TRUE</span>,
-            contextmenuWidth <span class='op'>=</span> <span class='fl'>200</span>,
-            contextmenuItems <span class='op'>=</span>
-              <span class='fu'><a href='markermenuItems.html'>markermenuItems</a></span><span class='op'>(</span>
-                <span class='fu'><a href='menuItem.html'>menuItem</a></span><span class='op'>(</span>text <span class='op'>=</span> <span class='st'>"Show Marker Coords"</span>,
-                         callback <span class='op'>=</span> <span class='st'>"function(e) {alert(e.latlng);}"</span>,
-                         index <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>
-              <span class='op'>)</span>
-          <span class='op'>)</span><span class='op'>)</span>
-
-</div></pre>
+    <div class="ref-examples sourceCode"><pre class='sourceCode r'><code><span class='r-in'><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://rstudio.github.io/leaflet/'>leaflet</a></span><span class='op'>)</span></span>
+<span class='r-in'><span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span><span class='op'>(</span>options <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leafletOptions</a></span><span class='op'>(</span></span>
+<span class='r-in'>    contextmenu <span class='op'>=</span> <span class='cn'>TRUE</span>,</span>
+<span class='r-in'>    contextmenuWidth <span class='op'>=</span> <span class='fl'>200</span>,</span>
+<span class='r-in'>    contextmenuItems <span class='op'>=</span></span>
+<span class='r-in'>     <span class='fu'><a href='context_mapmenuItems.html'>context_mapmenuItems</a></span><span class='op'>(</span></span>
+<span class='r-in'>       <span class='fu'><a href='context_menuItem.html'>context_menuItem</a></span><span class='op'>(</span><span class='st'>"Zoom Out"</span>, <span class='st'>"function(e) {this.zoomOut()}"</span>, disabled<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>,</span>
+<span class='r-in'>       <span class='st'>"-"</span>,</span>
+<span class='r-in'>       <span class='fu'><a href='context_menuItem.html'>context_menuItem</a></span><span class='op'>(</span><span class='st'>"Zoom In"</span>, <span class='st'>"function(e) {this.zoomIn()}"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/leaflet/man/leaflet-imports.html'>%&gt;%</a></span></span>
+<span class='r-in'>  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addTiles</a></span><span class='op'>(</span>group <span class='op'>=</span> <span class='st'>"base"</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/leaflet/man/leaflet-imports.html'>%&gt;%</a></span></span>
+<span class='r-in'>  <span class='fu'>addContextmenu</span><span class='op'>(</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/leaflet/man/leaflet-imports.html'>%&gt;%</a></span></span>
+<span class='r-in'>  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addMarkers</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>breweries91</span>, label <span class='op'>=</span> <span class='op'>~</span><span class='va'>brewery</span>,</span>
+<span class='r-in'>          layerId <span class='op'>=</span> <span class='op'>~</span><span class='va'>founded</span>, group <span class='op'>=</span> <span class='st'>"marker"</span>,</span>
+<span class='r-in'>          options <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>markerOptions</a></span><span class='op'>(</span></span>
+<span class='r-in'>            contextmenu <span class='op'>=</span> <span class='cn'>TRUE</span>,</span>
+<span class='r-in'>            contextmenuWidth <span class='op'>=</span> <span class='fl'>200</span>,</span>
+<span class='r-in'>            contextmenuItems <span class='op'>=</span></span>
+<span class='r-in'>              <span class='fu'><a href='context_markermenuItems.html'>context_markermenuItems</a></span><span class='op'>(</span></span>
+<span class='r-in'>                <span class='fu'><a href='context_menuItem.html'>context_menuItem</a></span><span class='op'>(</span>text <span class='op'>=</span> <span class='st'>"Show Marker Coords"</span>,</span>
+<span class='r-in'>                         callback <span class='op'>=</span> <span class='st'>"function(e) {alert(e.latlng);}"</span>,</span>
+<span class='r-in'>                         index <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span></span>
+<span class='r-in'>              <span class='op'>)</span></span>
+<span class='r-in'>          <span class='op'>)</span><span class='op'>)</span></span>
+<span class='r-in'></span>
+</code></pre></div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -218,7 +221,7 @@ is set (`MAPID` refers to the map's id).</p>
 </div>
 
 <div class="pkgdown">
-  <p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9000.</p></p>
+  <p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9001.</p></p>
 </div>
 
       </footer>

@@ -122,7 +122,7 @@
     <p>Make Mapkey Icon</p>
     </div>
 
-    <pre class="usage"><span class='fu'>makeMapkeyIcon</span><span class='op'>(</span>
+    <div class="ref-usage sourceCode"><pre class='sourceCode r'><code><span class='fu'>makeMapkeyIcon</span><span class='op'>(</span>
   icon <span class='op'>=</span> <span class='st'>"mapkey"</span>,
   color <span class='op'>=</span> <span class='st'>"#ff0000"</span>,
   iconSize <span class='op'>=</span> <span class='fl'>12</span>,
@@ -134,7 +134,7 @@
   hoverCSS <span class='op'>=</span> <span class='cn'>NULL</span>,
   htmlCode <span class='op'>=</span> <span class='cn'>NULL</span>,
   boxShadow <span class='op'>=</span> <span class='cn'>TRUE</span>
-<span class='op'>)</span></pre>
+<span class='op'>)</span></code></pre></div>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -198,43 +198,44 @@ color:#99defc !important;")</p></td>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other Mapkey Functions: 
-<code><a href='[.leaflet_mapkey_icon_set.html'>[.leaflet_mapkey_icon_set</a>()</code>,
+<code><a href='sub-.leaflet_mapkey_icon_set.html'>[.leaflet_mapkey_icon_set</a>()</code>,
 <code><a href='addMapkeyMarkers.html'>addMapkeyMarkers</a>()</code>,
 <code><a href='mapkeyIconList.html'>mapkeyIconList</a>()</code>,
 <code><a href='mapkeyIcons.html'>mapkeyIcons</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>makeMapkeyIcon</span><span class='op'>(</span>icon <span class='op'>=</span> <span class='st'>"traffic_signal"</span>,
-               color <span class='op'>=</span> <span class='st'>"#0000ff"</span>,
-               iconSize <span class='op'>=</span> <span class='fl'>12</span>,
-               boxShadow <span class='op'>=</span> <span class='cn'>FALSE</span>,
-               background<span class='op'>=</span><span class='st'>"transparent"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; $icon
-#&gt; [1] "traffic_signal"
-#&gt; 
-#&gt; $color
-#&gt; [1] "#0000ff"
-#&gt; 
-#&gt; $size
-#&gt; [1] 12
-#&gt; 
-#&gt; $background
-#&gt; [1] "transparent"
-#&gt; 
-#&gt; $borderRadius
-#&gt; [1] "100%"
-#&gt; 
-#&gt; $hoverScale
-#&gt; [1] 1.4
-#&gt; 
-#&gt; $hoverEffect
-#&gt; [1] TRUE
-#&gt; 
-#&gt; $boxShadow
-#&gt; [1] FALSE
-#&gt; 
-#&gt; attr(,"class")
-#&gt; [1] "leaflet_mapkey_icon"</div></pre>
+    <div class="ref-examples sourceCode"><pre class='sourceCode r'><code><span class='r-in'><span class='fu'>makeMapkeyIcon</span><span class='op'>(</span>icon <span class='op'>=</span> <span class='st'>"traffic_signal"</span>,</span>
+<span class='r-in'>               color <span class='op'>=</span> <span class='st'>"#0000ff"</span>,</span>
+<span class='r-in'>               iconSize <span class='op'>=</span> <span class='fl'>12</span>,</span>
+<span class='r-in'>               boxShadow <span class='op'>=</span> <span class='cn'>FALSE</span>,</span>
+<span class='r-in'>               background<span class='op'>=</span><span class='st'>"transparent"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $icon</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "traffic_signal"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $color</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "#0000ff"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $size</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 12</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $background</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "transparent"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $borderRadius</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "100%"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $hoverScale</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 1.4</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $hoverEffect</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] TRUE</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $boxShadow</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] FALSE</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> attr(,"class")</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "leaflet_mapkey_icon"</span>
+</code></pre></div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -250,7 +251,7 @@ color:#99defc !important;")</p></td>
 </div>
 
 <div class="pkgdown">
-  <p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9000.</p></p>
+  <p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9001.</p></p>
 </div>
 
       </footer>
