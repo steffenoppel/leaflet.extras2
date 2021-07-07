@@ -122,7 +122,7 @@
     <p>Open the Sidebar by ID</p>
     </div>
 
-    <div class="ref-usage sourceCode"><pre class='sourceCode r'><code><span class='fu'>openSidebar</span><span class='op'>(</span><span class='va'>map</span>, <span class='va'>id</span><span class='op'>)</span></code></pre></div>
+    <div class="ref-usage sourceCode"><pre class='sourceCode r'><code><span class='fu'>openSidebar</span><span class='op'>(</span><span class='va'>map</span>, <span class='va'>id</span>, sidebar_id <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></code></pre></div>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -133,7 +133,12 @@
     </tr>
     <tr>
       <th>id</th>
-      <td><p>The id of the <code><a href='sidebar_pane.html'>sidebar_pane</a></code> to open</p></td>
+      <td><p>The id of the <code><a href='sidebar_pane.html'>sidebar_pane</a></code> to open.</p></td>
+    </tr>
+    <tr>
+      <th>sidebar_id</th>
+      <td><p>The id of the sidebar (per <code><a href='sidebar_tabs.html'>sidebar_tabs</a></code>).
+Defaults to <code>NULL</code> such that the first sidebar is opened.</p></td>
     </tr>
     </table>
 
