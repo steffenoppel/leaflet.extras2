@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Changelog • leaflet.extras2</title>
+<title>Add addLabelgun Plugin — addLabelgun • leaflet.extras2</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,9 @@
 
 
 
-<meta property="og:title" content="Changelog" />
+<meta property="og:title" content="Add addLabelgun Plugin — addLabelgun" />
+<meta property="og:description" content="The plugin allows to avoid cluttering in marker labels and gives priority
+to labels of your choice (with heigher weight)." />
 
 
 <meta name="robots" content="noindex">
@@ -66,7 +68,7 @@
   <body data-spy="scroll" data-target="#toc">
     
 
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -112,47 +114,64 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1 data-toc-skip>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/trafficonese/leaflet.extras2/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+    <h1>Add addLabelgun Plugin</h1>
+    <small class="dont-index">Source: <a href='https://github.com/trafficonese/leaflet.extras2/blob/master/R/labelgun.R'><code>R/labelgun.R</code></a></small>
+    <div class="hidden name"><code>addLabelgun.Rd</code></div>
     </div>
 
-    <div id="leafletextras2-development-version" class="section level1">
-<h1 class="page-header" data-toc-text="development version">
-<a href="#leafletextras2-development-version" class="anchor" aria-hidden="true"></a>leaflet.extras2 (development version)<small> Unreleased </small></h1>
-<ul><li>Included <a href="https://github.com/ewoken/Leaflet.MovingMarker" class="external-link">Leaflet MovingMarkers</a> plugin</li>
-<li>Included <a href="https://github.com/makinacorpus/Leaflet.Spin" class="external-link">Leaflet Spin</a> plugin. Thanks to <a href='https://github.com/radbasa'>@radbasa</a></li>
-<li>Included <a href="https://github.com/Geovation/labelgun" class="external-link">Labelgun</a> plugin.</li>
-<li>
-<code>addTimeslider</code> gained styling options and the arguments <code>sameDate</code> and <code>ordertime</code> and works for Point / Linestring Simple Feature Collections</li>
-<li>Enable multiple sidebars. Thanks to <a href='https://github.com/jeffreyhanson'>@jeffreyhanson</a></li>
-<li>Option <code>fit</code> removed for sidebars as plugin CSS/JS was adapted</li>
-<li>Deprecated <code>menuItem</code>/<code>mapmenuItems</code>/<code>markermenuItems</code> and renamed with prefix <code>context_</code>. Fixes <a href='https://github.com/trafficonese/leaflet.extras2/issues/10'>#10</a> and <a href='https://github.com/trafficonese/leaflet.extras2/issues/17'>#17</a></li>
-</ul></div>
-    <div id="leafletextras2-110" class="section level1">
-<h1 class="page-header" data-toc-text="1.1.0">
-<a href="#leafletextras2-110" class="anchor" aria-hidden="true"></a>leaflet.extras2 1.1.0<small> 2020-10-20 </small></h1>
-<ul><li>Included <a href="https://github.com/aratcliffe/Leaflet.contextmenu" class="external-link">Leaflet Contextmenu</a> plugin</li>
-<li>Included <a href="https://github.com/dwilhelm89/LeafletSlider" class="external-link">Leaflet TimeSlider</a> plugin</li>
-<li>
-<code>addWMS</code> gained the <code>layerId</code> argument and works like <code><a href="https://rdrr.io/pkg/leaflet/man/map-layers.html" class="external-link">leaflet::addWMSTiles</a></code> except for the <code>popupOptions</code>
-</li>
-<li>
-<code>Side-by-Side</code> doesn’t propagate click events when dragging. Thanks to <code>f905a47</code> of <a href="https://github.com/digidem/leaflet-side-by-side/pull/23" class="external-link">#23</a>
-</li>
-</ul></div>
-    <div id="leafletextras2-100" class="section level1">
-<h1 class="page-header" data-toc-text="1.0.0">
-<a href="#leafletextras2-100" class="anchor" aria-hidden="true"></a>leaflet.extras2 1.0.0<small> 2020-05-18 </small></h1>
-<ul><li>Initial release</li>
-</ul></div>
-  </div>
+    <div class="ref-description">
+    <p>The plugin allows to avoid cluttering in marker labels and gives priority
+to labels of your choice (with heigher weight).</p>
+    </div>
 
+    <div class="ref-usage sourceCode"><pre class='sourceCode r'><code><span class='fu'>addLabelgun</span><span class='op'>(</span><span class='va'>map</span>, group <span class='op'>=</span> <span class='cn'>NULL</span>, weight <span class='op'>=</span> <span class='cn'>NULL</span>, entries <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></code></pre></div>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>map</th>
+      <td><p>A map widget object created from <code><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></code></p></td>
+    </tr>
+    <tr>
+      <th>group</th>
+      <td><p>The group name of the layer/s for which label collisions are
+to be avoided.
+To see the effects of this plugin the <code>labelOptions</code> of the markers must be
+configured with either <code>permanent = TRUE</code> or <code>noHide = TRUE</code>.</p></td>
+    </tr>
+    <tr>
+      <th>weight</th>
+      <td><p>An optional weight for markers. If a vector is given, the
+length should match the number of all markers in the corresponding groups.
+If a numeric value is specified, it is used for each marker and thus no
+prioritization of the labels takes place.
+In all other cases a random integer is calculated.</p></td>
+    </tr>
+    <tr>
+      <th>entries</th>
+      <td><p>A numeric value, a higher value relates to faster insertion
+and slower search, and vice versa. The default is 10</p></td>
+    </tr>
+    </table>
+
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A leaflet map object</p>
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+
+    <p>It is important to invoke the function after the markers have been
+  added to the map. Otherwise nothing will happen.</p>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p><a href='https://github.com/Geovation/labelgun'>https://github.com/Geovation/labelgun</a></p>
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
     </nav>
   </div>
-
 </div>
 
 
