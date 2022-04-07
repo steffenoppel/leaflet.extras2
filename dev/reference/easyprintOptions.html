@@ -56,7 +56,7 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">easyprintOptions</span><span class="op">(</span>
   title <span class="op">=</span> <span class="st">"Print map"</span>,
   position <span class="op">=</span> <span class="st">"topleft"</span>,
-  sizeModes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="st">"A4Portrait"</span>, <span class="st">"A4Landscape"</span>, <span class="st">"Current"</span><span class="op">)</span>,
+  sizeModes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="st">"A4Portrait"</span>, <span class="st">"A4Landscape"</span>, <span class="st">"CurrentSize"</span><span class="op">)</span>,
   defaultSizeTitles <span class="op">=</span> <span class="cn">NULL</span>,
   exportOnly <span class="op">=</span> <span class="cn">FALSE</span>,
   tileLayer <span class="op">=</span> <span class="cn">NULL</span>,
@@ -64,7 +64,7 @@
   filename <span class="op">=</span> <span class="st">"map"</span>,
   hidden <span class="op">=</span> <span class="cn">FALSE</span>,
   hideControlContainer <span class="op">=</span> <span class="cn">TRUE</span>,
-  hideClasses <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="op">)</span>,
+  hideClasses <span class="op">=</span> <span class="cn">NULL</span>,
   customWindowTitle <span class="op">=</span> <span class="cn">NULL</span>,
   spinnerBgColor <span class="op">=</span> <span class="st">"#0DC5C1"</span>,
   customSpinnerClass <span class="op">=</span> <span class="st">"epLoader"</span>
@@ -78,14 +78,19 @@
 <dt>position</dt>
 <dd><p>Positions the print button</p></dd>
 <dt>sizeModes</dt>
-<dd><p>Options available include <code>CurrentSize</code>, <code>A4Portrait</code>,
-<code>A4Landscape</code> or a custom size object</p></dd>
+<dd><p>Either a character vector with one of the following options:
+<code>CurrentSize</code>, <code>A4Portrait</code>, <code>A4Landscape</code>. If you want to
+include a <code>Custom</code> size mode you need to pass a named list, with
+<code>width</code>, <code>height</code>, <code>name</code> and <code>className</code> and assign a
+background-image in CSS.
+See the example in <code>./inst/examples/easyprint_app.R</code>.</p></dd>
 <dt>defaultSizeTitles</dt>
 <dd><p>Button tooltips for the default page sizes</p></dd>
 <dt>exportOnly</dt>
 <dd><p>If set to <code>TRUE</code> the map is exported to a .png file</p></dd>
 <dt>tileLayer</dt>
-<dd><p>A tile layer that you can wait for to draw (helpful when resizing)</p></dd>
+<dd><p>The group name of one tile layer that you can wait for to draw
+(helpful when resizing)</p></dd>
 <dt>tileWait</dt>
 <dd><p>How long to wait for the tiles to draw (helpful when resizing)</p></dd>
 <dt>filename</dt>
@@ -97,11 +102,11 @@ Instead you can create your own buttons or fire print events programmatically.</
 <dd><p>Hides the leaflet controls like the zoom buttons
 and the attribution on the print out</p></dd>
 <dt>hideClasses</dt>
-<dd><p>Hides classes on the print out. Use a list of strings as
-follow : list('div1', 'div2')</p></dd>
+<dd><p>Use a character vector or list of CSS-classes to hide on
+the output image.</p></dd>
 <dt>customWindowTitle</dt>
 <dd><p>A title for the print window which will get
-added the printed paper</p></dd>
+added to the printed paper</p></dd>
 <dt>spinnerBgColor</dt>
 <dd><p>A valid css colour for the spinner background color</p></dd>
 <dt>customSpinnerClass</dt>
