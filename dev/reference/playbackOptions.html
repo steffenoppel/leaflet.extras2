@@ -59,13 +59,16 @@ the <a href="https://github.com/hallahan/LeafletPlayback" class="external-link">
   color <span class="op">=</span> <span class="st">"blue"</span>,
   radius <span class="op">=</span> <span class="fl">5</span>,
   tickLen <span class="op">=</span> <span class="fl">250</span>,
-  speed <span class="op">=</span> <span class="fl">1</span>,
+  speed <span class="op">=</span> <span class="fl">50</span>,
   maxInterpolationTime <span class="op">=</span> <span class="fl">5</span> <span class="op">*</span> <span class="fl">60</span> <span class="op">*</span> <span class="fl">1000</span>,
   tracksLayer <span class="op">=</span> <span class="cn">TRUE</span>,
   playControl <span class="op">=</span> <span class="cn">TRUE</span>,
   dateControl <span class="op">=</span> <span class="cn">TRUE</span>,
   sliderControl <span class="op">=</span> <span class="cn">TRUE</span>,
+  orientIcons <span class="op">=</span> <span class="cn">FALSE</span>,
   staleTime <span class="op">=</span> <span class="fl">60</span> <span class="op">*</span> <span class="fl">60</span> <span class="op">*</span> <span class="fl">1000</span>,
+  transitionpopup <span class="op">=</span> <span class="cn">TRUE</span>,
+  transitionlabel <span class="op">=</span> <span class="cn">TRUE</span>,
   <span class="va">...</span>
 <span class="op">)</span></code></pre></div>
     </div>
@@ -80,7 +83,7 @@ the <a href="https://github.com/hallahan/LeafletPlayback" class="external-link">
 <dd><p>Set tick length in milliseconds. Increasing this value, may
 improve performance, at the cost of animation smoothness. Default is 250</p></dd>
 <dt>speed</dt>
-<dd><p>Set float multiplier for default animation speed. Default is 1</p></dd>
+<dd><p>Set float multiplier for default animation speed. Default is 50</p></dd>
 <dt>maxInterpolationTime</dt>
 <dd><p>Set max interpolation time in seconds.
 Default is 5*60*1000 (5 minutes).</p></dd>
@@ -96,9 +99,18 @@ Default is <code>TRUE</code></p></dd>
 <dt>sliderControl</dt>
 <dd><p>Set <code>TRUE</code> if slider control is needed.
 Default is <code>TRUE</code></p></dd>
+<dt>orientIcons</dt>
+<dd><p>Set <code>TRUE</code> if you want icons to orient themselves on each
+tick based on the bearing towards their next location. Default: <code>FALSE</code></p></dd>
 <dt>staleTime</dt>
 <dd><p>Set time before a track is considered stale and faded out.
 Default is 60*60*1000 (1 hour)</p></dd>
+<dt>transitionpopup</dt>
+<dd><p>Should the position of the popup move smoothly,
+like the marker icon? Default: <code>TRUE</code></p></dd>
+<dt>transitionlabel</dt>
+<dd><p>Should the position of the label move smoothly,
+like the marker icon? Default: <code>TRUE</code></p></dd>
 <dt>...</dt>
 <dd><p>Further arguments passed to `L.Playback`</p></dd>
 </dl></div>
