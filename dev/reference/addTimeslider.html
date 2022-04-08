@@ -71,6 +71,8 @@ JQuery UI slider.</p>
   dashArray <span class="op">=</span> <span class="cn">NULL</span>,
   popup <span class="op">=</span> <span class="cn">NULL</span>,
   popupOptions <span class="op">=</span> <span class="cn">NULL</span>,
+  label <span class="op">=</span> <span class="cn">NULL</span>,
+  labelOptions <span class="op">=</span> <span class="cn">NULL</span>,
   ordertime <span class="op">=</span> <span class="cn">TRUE</span>,
   options <span class="op">=</span> <span class="fu"><a href="timesliderOptions.html">timesliderOptions</a></span><span class="op">(</span><span class="op">)</span>
 <span class="op">)</span></code></pre></div>
@@ -113,6 +115,11 @@ recommended to escape the text using <code><a href="https://rdrr.io/pkg/htmltool
 for security reasons)</p></dd>
 <dt>popupOptions</dt>
 <dd><p>A Vector of <code><a href="https://rdrr.io/pkg/leaflet/man/map-options.html" class="external-link">popupOptions</a></code> to provide popups</p></dd>
+<dt>label</dt>
+<dd><p>a character vector of the HTML content for the labels</p></dd>
+<dt>labelOptions</dt>
+<dd><p>A Vector of <code><a href="https://rdrr.io/pkg/leaflet/man/map-options.html" class="external-link">labelOptions</a></code> to provide label
+options for each label. Default <code>NULL</code></p></dd>
 <dt>ordertime</dt>
 <dd><p>boolean value, indicating wether to order the data by the
 time column. The slider will adopt the order of the timestamps.
