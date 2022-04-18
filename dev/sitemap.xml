@@ -43,6 +43,12 @@
     <loc>/reference/addLabelgun.html</loc>
   </url>
   <url>
+    <loc>/reference/addLeafletsync.html</loc>
+  </url>
+  <url>
+    <loc>/reference/addLeafletsyncDependency.html</loc>
+  </url>
+  <url>
     <loc>/reference/addMapkeyMarkers.html</loc>
   </url>
   <url>
@@ -145,7 +151,13 @@
     <loc>/reference/insertItemContextmenu.html</loc>
   </url>
   <url>
+    <loc>/reference/isSynced.html</loc>
+  </url>
+  <url>
     <loc>/reference/leaflet.extras2.html</loc>
+  </url>
+  <url>
+    <loc>/reference/leafletsyncOptions.html</loc>
   </url>
   <url>
     <loc>/reference/makeMapkeyIcon.html</loc>
@@ -251,6 +263,9 @@
   </url>
   <url>
     <loc>/reference/to_ms.html</loc>
+  </url>
+  <url>
+    <loc>/reference/unsync.html</loc>
   </url>
   <url>
     <loc>/reference/updateHexbin.html</loc>
