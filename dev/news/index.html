@@ -58,13 +58,13 @@
 <li>Enable multiple sidebars. Thanks to <a href="https://github.com/jeffreyhanson" class="external-link">@jeffreyhanson</a></li>
 <li>Option <code>fit</code> removed for sidebars as plugin CSS/JS was adapted</li>
 <li>Deprecated <code>menuItem</code>/<code>mapmenuItems</code>/<code>markermenuItems</code> and renamed with prefix <code>context_</code>. Fixes <a href="https://github.com/trafficonese/leaflet.extras2/issues/10" class="external-link">#10</a> and <a href="https://github.com/trafficonese/leaflet.extras2/issues/17" class="external-link">#17</a></li>
-<li>Some improvement for the <code>easyprint</code> plugin: (Fixes <a href="https://github.com/trafficonese/leaflet.extras2/issues/31" class="external-link">#31</a>)
-<ul><li>It is now possible to include multiple custom <code>sizeModes</code> in <code>easyprintOptions</code>. The example <a href="./inst/examples/easyprint_app.R">easyprint_app.R</a> has been extended to demonstrate the new functionalities. <strong>Unfortunately</strong> the <code>CurrentSize</code> option via <code>easyprintMap</code> always returns a gray background, although via the control button it works just fine.</li>
+<li>Some improvement for the <code>easyprint</code> plugin: (Fixes <a href="https://github.com/trafficonese/leaflet.extras2/issues/31" class="external-link">#31</a>)<ul><li>It is now possible to include multiple custom <code>sizeModes</code> in <code>easyprintOptions</code>. The example <a href="./inst/examples/easyprint_app.R">easyprint_app.R</a> has been extended to demonstrate the new functionalities. <strong>Unfortunately</strong> the <code>CurrentSize</code> option via <code>easyprintMap</code> always returns a gray background, although via the control button it works just fine.</li>
 <li>The <code>tileLayer</code> option now accepts a group name for a tilelayer for which printing will wait until the layer is fully loaded.</li>
 </ul></li>
 <li>The <code>addPlayback</code> is now capable of displaying labels and popups for every timestep. The transition of labels and popups can be controlled with <code>transitionpopup</code> and <code>transitionlabel</code>.</li>
 <li>The function <code>addHistory</code> now requires the <em>fontawesome</em> package, since the dependency is not included in shiny’s shared directory anymore.</li>
 <li>The function <code>addWMS</code> gained the argument <code>checkempty</code>, which will check the returning HTML-body tag. If the body is empty, no popup is opened.</li>
+<li>The function <code>addMovingMarker</code> now accepts icons created by <code>makeAwesomeIcon</code>.</li>
 </ul></div>
     <div class="section level2">
 <h2 class="page-header" data-toc-text="1.1.0" id="leafletextras2-110">leaflet.extras2 1.1.0<small>2020-10-20</small><a class="anchor" aria-label="anchor" href="#leafletextras2-110"></a></h2>
@@ -79,8 +79,7 @@
 </ul></div>
     <div class="section level2">
 <h2 class="page-header" data-toc-text="1.0.0" id="leafletextras2-100">leaflet.extras2 1.0.0<small>2020-05-18</small><a class="anchor" aria-label="anchor" href="#leafletextras2-100"></a></h2>
-<ul><li>Initial release</li>
-</ul></div>
+<ul><li>Initial release</li></ul></div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -95,7 +94,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.9000.</p>
 </div>
 
       </footer></div>
