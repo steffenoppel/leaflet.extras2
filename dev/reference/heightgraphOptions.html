@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">leaflet.extras2</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.1.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.2.0.9000</span>
       </span>
     </div>
 
@@ -53,19 +53,19 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">heightgraphOptions</span><span class="op">(</span>
-  position <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"bottomright"</span>, <span class="st">"topleft"</span>, <span class="st">"topright"</span>, <span class="st">"bottomleft"</span><span class="op">)</span>,
-  width <span class="op">=</span> <span class="fl">800</span>,
-  height <span class="op">=</span> <span class="fl">200</span>,
-  margins <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>top <span class="op">=</span> <span class="fl">10</span>, right <span class="op">=</span> <span class="fl">30</span>, bottom <span class="op">=</span> <span class="fl">55</span>, left <span class="op">=</span> <span class="fl">50</span><span class="op">)</span>,
-  expand <span class="op">=</span> <span class="cn">TRUE</span>,
-  expandCallback <span class="op">=</span> <span class="cn">NULL</span>,
-  mappings <span class="op">=</span> <span class="cn">NULL</span>,
-  highlightStyle <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span>,
-  translation <span class="op">=</span> <span class="cn">NULL</span>,
-  xTicks <span class="op">=</span> <span class="fl">3</span>,
-  yTicks <span class="op">=</span> <span class="fl">3</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">heightgraphOptions</span><span class="op">(</span></span>
+<span>  position <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"bottomright"</span>, <span class="st">"topleft"</span>, <span class="st">"topright"</span>, <span class="st">"bottomleft"</span><span class="op">)</span>,</span>
+<span>  width <span class="op">=</span> <span class="fl">800</span>,</span>
+<span>  height <span class="op">=</span> <span class="fl">200</span>,</span>
+<span>  margins <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>top <span class="op">=</span> <span class="fl">10</span>, right <span class="op">=</span> <span class="fl">30</span>, bottom <span class="op">=</span> <span class="fl">55</span>, left <span class="op">=</span> <span class="fl">50</span><span class="op">)</span>,</span>
+<span>  expand <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  expandCallback <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  mappings <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  highlightStyle <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span>,</span>
+<span>  translation <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  xTicks <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>  yTicks <span class="op">=</span> <span class="fl">3</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -73,53 +73,78 @@
     <dl><dt>position</dt>
 <dd><p>position of control: "topleft", "topright", "bottomleft", or
 "bottomright". Default is <code>bottomright</code>.</p></dd>
+
+
 <dt>width</dt>
 <dd><p>The width of the expanded heightgraph display in pixels. Default
 is <code>800</code>.</p></dd>
+
+
 <dt>height</dt>
 <dd><p>The height of the expanded heightgraph display in pixels.
 Default is <code>200</code>.</p></dd>
+
+
 <dt>margins</dt>
 <dd><p>The margins define the distance between the border of the
 heightgraph and the actual graph inside. You are able to specify margins
 for top, right, bottom and left in pixels. Default is <code>list(top = 10,
 right = 30, bottom = 55, left = 50)</code>.</p></dd>
+
+
 <dt>expand</dt>
 <dd><p>Boolean value that defines if the heightgraph should be
 expanded on creation. Default is <code>200</code>.</p></dd>
+
+
 <dt>expandCallback</dt>
 <dd><p>Function to be called if the heightgraph is expanded or
 reduced. The state of the heightgraph is passed as an argument. It is
 <code>TRUE</code> when expanded and <code>FALSE</code> when reduced. Default is
 <code>NULL</code>.</p></dd>
+
+
 <dt>mappings</dt>
 <dd><p>You may add a mappings object to customize the colors and
 labels in the height graph. Without adding custom mappings the segments and
 labels within the graph will be displayed in random colors. Each key of the
 object must correspond to the <code>summary</code> key in <code>properties</code>
 within the <code>FeatureCollection</code>. Default is <code>NULL</code>.</p></dd>
+
+
 <dt>highlightStyle</dt>
 <dd><p>You can customize the highlight style when using the
 horizontal line to find parts of the route above an elevation value. Use
 any Leaflet Path options as value of the highlightStyle parameter. Default
 is <code>list(color = "red")</code>.</p></dd>
+
+
 <dt>translation</dt>
 <dd><p>You can change the labels of the heightgraph info field by
 passing translations for <code>distance</code>, <code>elevation</code>,
 <code>segment_length</code>, <code>type</code> and <code>legend</code>. Default is
 <code>NULL</code>.</p></dd>
+
+
 <dt>xTicks</dt>
 <dd><p>Specify the tick frequency in the x axis of the graph.
 Corresponds approximately to 2 to the power of value ticks. Default is
 <code>3</code>.</p></dd>
+
+
 <dt>yTicks</dt>
 <dd><p>Specify the tick frequency in the y axis of the graph.
 Corresponds approximately to 2 to the power of value ticks. Default is
 <code>3</code>.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A list of further options for <code>addHeightgraph</code></p>
+    
+
+<p>A list of further options for <code>addHeightgraph</code></p>
+
+
     </div>
     <div id="see-also">
     <h2>See also</h2>
@@ -139,7 +164,7 @@ Corresponds approximately to 2 to the power of value ticks. Default is
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
       </footer></div>

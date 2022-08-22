@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">leaflet.extras2</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.1.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.2.0.9000</span>
       </span>
     </div>
 
@@ -53,14 +53,14 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">velocityOptions</span><span class="op">(</span>
-  speedUnit <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"m/s"</span>, <span class="st">"k/h"</span>, <span class="st">"kt"</span><span class="op">)</span>,
-  minVelocity <span class="op">=</span> <span class="fl">0</span>,
-  maxVelocity <span class="op">=</span> <span class="fl">10</span>,
-  velocityScale <span class="op">=</span> <span class="fl">0.005</span>,
-  colorScale <span class="op">=</span> <span class="cn">NULL</span>,
-  <span class="va">...</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">velocityOptions</span><span class="op">(</span></span>
+<span>  speedUnit <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"m/s"</span>, <span class="st">"k/h"</span>, <span class="st">"kt"</span><span class="op">)</span>,</span>
+<span>  minVelocity <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  maxVelocity <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>  velocityScale <span class="op">=</span> <span class="fl">0.005</span>,</span>
+<span>  colorScale <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  <span class="va">...</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -68,21 +68,36 @@
     <dl><dt>speedUnit</dt>
 <dd><p>Could be 'm/s' for meter per second, 'k/h' for kilometer
 per hour or 'kt' for knots</p></dd>
+
+
 <dt>minVelocity</dt>
 <dd><p>velocity at which particle intensity is minimum</p></dd>
+
+
 <dt>maxVelocity</dt>
 <dd><p>velocity at which particle intensity is maximum</p></dd>
+
+
 <dt>velocityScale</dt>
 <dd><p>scale for wind velocity</p></dd>
+
+
 <dt>colorScale</dt>
 <dd><p>A vector of hex colors or an RGB matrix</p></dd>
+
+
 <dt>...</dt>
 <dd><p>Further arguments passed to the Velocity layer and Windy.js.
 For more information, please visit <a href="https://github.com/onaci/leaflet-velocity" class="external-link">leaflet-velocity plugin</a></p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A list of further options for <code>addVelocity</code></p>
+    
+
+<p>A list of further options for <code>addVelocity</code></p>
+
+
     </div>
     <div id="see-also">
     <h2>See also</h2>
@@ -104,7 +119,7 @@ For more information, please visit <a href="https://github.com/onaci/leaflet-vel
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
       </footer></div>

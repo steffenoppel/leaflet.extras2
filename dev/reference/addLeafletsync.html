@@ -20,7 +20,7 @@ Leaflet.Sync"><meta name="robots" content="noindex"><!-- mathjax --><script src=
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">leaflet.extras2</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.1.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.2.0.9000</span>
       </span>
     </div>
 
@@ -59,22 +59,26 @@ to <code><a href="leafletsyncOptions.html">leafletsyncOptions</a></code>. For mo
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">addLeafletsync</span><span class="op">(</span>
-  <span class="va">map</span>,
-  ids <span class="op">=</span> <span class="cn">NULL</span>,
-  synclist <span class="op">=</span> <span class="st">"all"</span>,
-  options <span class="op">=</span> <span class="fu"><a href="leafletsyncOptions.html">leafletsyncOptions</a></span><span class="op">(</span><span class="op">)</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">addLeafletsync</span><span class="op">(</span></span>
+<span>  <span class="va">map</span>,</span>
+<span>  ids <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  synclist <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  options <span class="op">=</span> <span class="fu"><a href="leafletsyncOptions.html">leafletsyncOptions</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>map</dt>
 <dd><p>the map</p></dd>
+
+
 <dt>ids</dt>
 <dd><p>the map ids to be synced. If you use a <code>synclist</code>, you may
 leave it <code>NULL.</code> The unique names and values of <code>synclist</code> will
 be used.</p></dd>
+
+
 <dt>synclist</dt>
 <dd><p>The synchronization list. The default is <code>'all'</code>, which
 creates a list of all possible combinations of <code>ids</code>. For a more
@@ -83,15 +87,20 @@ detailed control, a named list can be passed in this form
 where the names and values represent map-ids. The names of the lists serve
 as a basis and the list values are the maps to be kept in sync with the
 basemap.</p></dd>
+
+
 <dt>options</dt>
 <dd><p>A named list of options. See <code><a href="leafletsyncOptions.html">leafletsyncOptions</a></code>.
 If you want to add different options to multiple maps, you can wrap the
 options in a named list, with the names being the map-ids. See the example
 in <code>./inst/examples/offset_continuous.R</code></p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A modified leaflet map</p>
+    
+
+<p>A modified leaflet map</p>
     </div>
     <div id="note">
     <h2>Note</h2>
@@ -124,7 +133,7 @@ in <code>./inst/examples/offset_continuous.R</code></p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
       </footer></div>

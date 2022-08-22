@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">leaflet.extras2</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.1.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.2.0.9000</span>
       </span>
     </div>
 
@@ -53,31 +53,40 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">showContextmenu</span><span class="op">(</span><span class="va">map</span>, lat <span class="op">=</span> <span class="cn">NULL</span>, lng <span class="op">=</span> <span class="cn">NULL</span>, data <span class="op">=</span> <span class="fu">leaflet</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/getMapData.html" class="external-link">getMapData</a></span><span class="op">(</span><span class="va">map</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">showContextmenu</span><span class="op">(</span><span class="va">map</span>, lat <span class="op">=</span> <span class="cn">NULL</span>, lng <span class="op">=</span> <span class="cn">NULL</span>, data <span class="op">=</span> <span class="fu">leaflet</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/getMapData.html" class="external-link">getMapData</a></span><span class="op">(</span><span class="va">map</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>map</dt>
 <dd><p>a map widget object created from <code><a href="https://rdrr.io/pkg/leaflet/man/leaflet.html" class="external-link">leaflet</a>()</code></p></dd>
+
+
 <dt>lat</dt>
 <dd><p>a vector of latitudes or a formula (similar to the <code>lng</code>
 argument; the names <code>lat</code> and <code>latitude</code> are used when guessing
 the latitude column from <code>data</code>)</p></dd>
+
+
 <dt>lng</dt>
 <dd><p>a numeric vector of longitudes, or a one-sided formula of the form
 <code>~x</code> where <code>x</code> is a variable in <code>data</code>; by default (if not
 explicitly provided), it will be automatically inferred from <code>data</code> by
 looking for a column named <code>lng</code>, <code>long</code>, or <code>longitude</code>
 (case-insensitively)</p></dd>
+
+
 <dt>data</dt>
 <dd><p>the data object from which the argument values are derived; by
 default, it is the <code>data</code> object provided to <code><a href="https://rdrr.io/pkg/leaflet/man/leaflet.html" class="external-link">leaflet()</a></code>
 initially, but can be overridden</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A leaflet map object</p>
+    
+
+<p>A leaflet map object</p>
     </div>
     <div id="see-also">
     <h2>See also</h2>
@@ -109,7 +118,7 @@ initially, but can be overridden</p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
       </footer></div>

@@ -18,7 +18,7 @@ to labels of your choice (with higher weight)."><meta name="robots" content="noi
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">leaflet.extras2</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.1.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.2.0.9000</span>
       </span>
     </div>
 
@@ -55,31 +55,40 @@ to labels of your choice (with higher weight).</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">addLabelgun</span><span class="op">(</span><span class="va">map</span>, group <span class="op">=</span> <span class="cn">NULL</span>, weight <span class="op">=</span> <span class="cn">NULL</span>, entries <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">addLabelgun</span><span class="op">(</span><span class="va">map</span>, group <span class="op">=</span> <span class="cn">NULL</span>, weight <span class="op">=</span> <span class="cn">NULL</span>, entries <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>map</dt>
 <dd><p>A map widget object created from <code><a href="https://rdrr.io/pkg/leaflet/man/leaflet.html" class="external-link">leaflet</a></code></p></dd>
+
+
 <dt>group</dt>
 <dd><p>The group name of the layer/s for which label collisions are
 to be avoided.
 To see the effects of this plugin the <code>labelOptions</code> of the markers must be
 configured with either <code>permanent = TRUE</code> or <code>noHide = TRUE</code>.</p></dd>
+
+
 <dt>weight</dt>
 <dd><p>An optional weight for markers. If a vector is given, the
 length should match the number of all markers in the corresponding groups.
 If a numeric value is specified, it is used for each marker and thus no
 prioritization of the labels takes place.
 In all other cases a random integer is calculated.</p></dd>
+
+
 <dt>entries</dt>
 <dd><p>A numeric value, a higher value relates to faster insertion
 and slower search, and vice versa. The default is 10</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A leaflet map object</p>
+    
+
+<p>A leaflet map object</p>
     </div>
     <div id="note">
     <h2>Note</h2>
@@ -103,7 +112,7 @@ and slower search, and vice versa. The default is 10</p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
       </footer></div>

@@ -18,7 +18,7 @@ The plugin works with Panes, see the example."><meta name="robots" content="noin
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">leaflet.extras2</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.1.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.2.0.9000</span>
       </span>
     </div>
 
@@ -55,34 +55,45 @@ The plugin works with Panes, see the example.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">addSidebyside</span><span class="op">(</span>
-  <span class="va">map</span>,
-  layerId <span class="op">=</span> <span class="cn">NULL</span>,
-  leftId <span class="op">=</span> <span class="cn">NULL</span>,
-  rightId <span class="op">=</span> <span class="cn">NULL</span>,
-  options <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>thumbSize <span class="op">=</span> <span class="fl">42</span>, padding <span class="op">=</span> <span class="fl">0</span><span class="op">)</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">addSidebyside</span><span class="op">(</span></span>
+<span>  <span class="va">map</span>,</span>
+<span>  layerId <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  leftId <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  rightId <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  options <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>thumbSize <span class="op">=</span> <span class="fl">42</span>, padding <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>map</dt>
 <dd><p>a map widget</p></dd>
+
+
 <dt>layerId</dt>
 <dd><p>the layer id, needed for <code><a href="removeSidebyside.html">removeSidebyside</a></code></p></dd>
+
+
 <dt>leftId</dt>
 <dd><p>the <code>layerId</code> of the Tile layer that should be
 visible on the <strong>left</strong> side</p></dd>
+
+
 <dt>rightId</dt>
 <dd><p>the <code>layerId</code> of the Tile layer that should be
 visible on the <strong>right</strong> side</p></dd>
+
+
 <dt>options</dt>
 <dd><p>A list of options. Currently only <code>thumbSize</code> and
 <code>padding</code> can be changed.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>the new <code>map</code> object</p>
+    
+
+<p>the new <code>map</code> object</p>
     </div>
     <div id="note">
     <h2>Note</h2>
@@ -101,27 +112,27 @@ visible on the <strong>right</strong> side</p></dd>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://rstudio.github.io/leaflet/" class="external-link">leaflet</a></span><span class="op">)</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://trafficonese.github.io/leaflet.extras2/" class="external-link">leaflet.extras2</a></span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/leaflet.html" class="external-link">leaflet</a></span><span class="op">(</span><span class="va">quakes</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/leaflet/man/leaflet-imports.html" class="external-link">%&gt;%</a></span></span>
-<span class="r-in">  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/addMapPane.html" class="external-link">addMapPane</a></span><span class="op">(</span><span class="st">"left"</span>, zIndex <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/leaflet/man/leaflet-imports.html" class="external-link">%&gt;%</a></span></span>
-<span class="r-in">  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/addMapPane.html" class="external-link">addMapPane</a></span><span class="op">(</span><span class="st">"right"</span>, zIndex <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/leaflet/man/leaflet-imports.html" class="external-link">%&gt;%</a></span></span>
-<span class="r-in">  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-layers.html" class="external-link">addTiles</a></span><span class="op">(</span>group <span class="op">=</span> <span class="st">"base"</span>, layerId <span class="op">=</span> <span class="st">"baseid"</span>,</span>
-<span class="r-in">           options <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-options.html" class="external-link">pathOptions</a></span><span class="op">(</span>pane <span class="op">=</span> <span class="st">"right"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/leaflet/man/leaflet-imports.html" class="external-link">%&gt;%</a></span></span>
-<span class="r-in">  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/addProviderTiles.html" class="external-link">addProviderTiles</a></span><span class="op">(</span><span class="va">providers</span><span class="op">$</span><span class="va">CartoDB.DarkMatter</span>, group<span class="op">=</span><span class="st">"carto"</span>, layerId <span class="op">=</span> <span class="st">"cartoid"</span>,</span>
-<span class="r-in">                   options <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-options.html" class="external-link">pathOptions</a></span><span class="op">(</span>pane <span class="op">=</span> <span class="st">"left"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/leaflet/man/leaflet-imports.html" class="external-link">%&gt;%</a></span></span>
-<span class="r-in">  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-layers.html" class="external-link">addCircleMarkers</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">breweries91</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">15</span>,<span class="op">]</span>, color <span class="op">=</span> <span class="st">"blue"</span>, group <span class="op">=</span> <span class="st">"blue"</span>,</span>
-<span class="r-in">                   options <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-options.html" class="external-link">pathOptions</a></span><span class="op">(</span>pane <span class="op">=</span> <span class="st">"left"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/leaflet/man/leaflet-imports.html" class="external-link">%&gt;%</a></span></span>
-<span class="r-in">  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-layers.html" class="external-link">addCircleMarkers</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">breweries91</span><span class="op">[</span><span class="fl">15</span><span class="op">:</span><span class="fl">20</span>,<span class="op">]</span>, color <span class="op">=</span> <span class="st">"yellow"</span>, group <span class="op">=</span> <span class="st">"yellow"</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/leaflet/man/leaflet-imports.html" class="external-link">%&gt;%</a></span></span>
-<span class="r-in">  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-layers.html" class="external-link">addCircleMarkers</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">breweries91</span><span class="op">[</span><span class="fl">15</span><span class="op">:</span><span class="fl">30</span>,<span class="op">]</span>, color <span class="op">=</span> <span class="st">"red"</span>, group <span class="op">=</span> <span class="st">"red"</span>,</span>
-<span class="r-in">                   options <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-options.html" class="external-link">pathOptions</a></span><span class="op">(</span>pane <span class="op">=</span> <span class="st">"right"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/leaflet/man/leaflet-imports.html" class="external-link">%&gt;%</a></span></span>
-<span class="r-in">  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/addLayersControl.html" class="external-link">addLayersControl</a></span><span class="op">(</span>overlayGroups <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"blue"</span>,<span class="st">"red"</span>, <span class="st">"yellow"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/leaflet/man/leaflet-imports.html" class="external-link">%&gt;%</a></span></span>
-<span class="r-in">  <span class="fu">addSidebyside</span><span class="op">(</span>layerId <span class="op">=</span> <span class="st">"sidecontrols"</span>,</span>
-<span class="r-in">                rightId <span class="op">=</span> <span class="st">"baseid"</span>,</span>
-<span class="r-in">                leftId <span class="op">=</span> <span class="st">"cartoid"</span><span class="op">)</span></span>
-<div id="htmlwidget-6ca9bd622dc1e20501be" style="width:700px;height:432.632880098888px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6ca9bd622dc1e20501be">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"createMapPane","args":["left",0]},{"method":"createMapPane","args":["right",0]},{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png","baseid","base",{"interactive":true,"className":"","pane":"right","attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addProviderTiles","args":["CartoDB.DarkMatter","cartoid","carto",{"interactive":true,"className":"","pane":"left"}]},{"method":"addCircleMarkers","args":[[49.71979,49.884051,49.502098,49.274716,49.861905,49.794334,49.701477,49.067436,49.070292,49.77994,49.060542,49.561804,49.595108,49.602554,49.72581],[10.889217,11.228988,10.416021,10.928096,11.291932,11.509409,11.163238,10.34418,10.316987,11.186931,10.965571,11.368508,11.009011,11.005049,11.059662],10,null,"blue",{"interactive":true,"className":"","pane":"left","stroke":true,"color":"blue","weight":5,"opacity":0.5,"fill":true,"fillColor":"blue","fillOpacity":0.2},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[49.72581,49.7202,49.644533,49.645651,49.615866,49.50683],[11.059662,11.056749,11.252699,11.248618,10.630027,11.428338],10,null,"yellow",{"interactive":true,"className":"","stroke":true,"color":"yellow","weight":5,"opacity":0.5,"fill":true,"fillColor":"yellow","fillOpacity":0.2},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[49.72581,49.7202,49.644533,49.645651,49.615866,49.50683,48.900742,49.707329,49.884229,49.677827,49.450083,49.710838,49.276265,49.554706,49.882777,49.727998],[11.059662,11.056749,11.252699,11.248618,10.630027,11.428338,11.029479,10.806113,11.267583,11.252911,11.308721,11.172792,10.685605,11.22997,11.129541,11.202701],10,null,"red",{"interactive":true,"className":"","pane":"right","stroke":true,"color":"red","weight":5,"opacity":0.5,"fill":true,"fillColor":"red","fillOpacity":0.2},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLayersControl","args":[[],["blue","red","yellow"],{"collapsed":true,"autoZIndex":true,"position":"topright"}]},{"method":"addSidebyside","args":["sidecontrols","cartoid","baseid",{"thumbSize":42,"padding":0}]}],"limits":{"lat":[48.900742,49.884229],"lng":[10.316987,11.509409]}},"evals":[],"jsHooks":[]}</script></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://rstudio.github.io/leaflet/" class="external-link">leaflet</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://trafficonese.github.io/leaflet.extras2/" class="external-link">leaflet.extras2</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/leaflet.html" class="external-link">leaflet</a></span><span class="op">(</span><span class="va">quakes</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/addMapPane.html" class="external-link">addMapPane</a></span><span class="op">(</span><span class="st">"left"</span>, zIndex <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/addMapPane.html" class="external-link">addMapPane</a></span><span class="op">(</span><span class="st">"right"</span>, zIndex <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-layers.html" class="external-link">addTiles</a></span><span class="op">(</span>group <span class="op">=</span> <span class="st">"base"</span>, layerId <span class="op">=</span> <span class="st">"baseid"</span>,</span></span>
+<span class="r-in"><span>           options <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-options.html" class="external-link">pathOptions</a></span><span class="op">(</span>pane <span class="op">=</span> <span class="st">"right"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/addProviderTiles.html" class="external-link">addProviderTiles</a></span><span class="op">(</span><span class="va">providers</span><span class="op">$</span><span class="va">CartoDB.DarkMatter</span>, group<span class="op">=</span><span class="st">"carto"</span>, layerId <span class="op">=</span> <span class="st">"cartoid"</span>,</span></span>
+<span class="r-in"><span>                   options <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-options.html" class="external-link">pathOptions</a></span><span class="op">(</span>pane <span class="op">=</span> <span class="st">"left"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-layers.html" class="external-link">addCircleMarkers</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">breweries91</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">15</span>,<span class="op">]</span>, color <span class="op">=</span> <span class="st">"blue"</span>, group <span class="op">=</span> <span class="st">"blue"</span>,</span></span>
+<span class="r-in"><span>                   options <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-options.html" class="external-link">pathOptions</a></span><span class="op">(</span>pane <span class="op">=</span> <span class="st">"left"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-layers.html" class="external-link">addCircleMarkers</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">breweries91</span><span class="op">[</span><span class="fl">15</span><span class="op">:</span><span class="fl">20</span>,<span class="op">]</span>, color <span class="op">=</span> <span class="st">"yellow"</span>, group <span class="op">=</span> <span class="st">"yellow"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-layers.html" class="external-link">addCircleMarkers</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">breweries91</span><span class="op">[</span><span class="fl">15</span><span class="op">:</span><span class="fl">30</span>,<span class="op">]</span>, color <span class="op">=</span> <span class="st">"red"</span>, group <span class="op">=</span> <span class="st">"red"</span>,</span></span>
+<span class="r-in"><span>                   options <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-options.html" class="external-link">pathOptions</a></span><span class="op">(</span>pane <span class="op">=</span> <span class="st">"right"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/addLayersControl.html" class="external-link">addLayersControl</a></span><span class="op">(</span>overlayGroups <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"blue"</span>,<span class="st">"red"</span>, <span class="st">"yellow"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span></span>
+<span class="r-in"><span>  <span class="fu">addSidebyside</span><span class="op">(</span>layerId <span class="op">=</span> <span class="st">"sidecontrols"</span>,</span></span>
+<span class="r-in"><span>                rightId <span class="op">=</span> <span class="st">"baseid"</span>,</span></span>
+<span class="r-in"><span>                leftId <span class="op">=</span> <span class="st">"cartoid"</span><span class="op">)</span></span></span>
+<div id="htmlwidget-7494a5f04f9233ffd34b" style="width:700px;height:432.632880098888px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7494a5f04f9233ffd34b">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"createMapPane","args":["left",0]},{"method":"createMapPane","args":["right",0]},{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png","baseid","base",{"interactive":true,"className":"","pane":"right","attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addProviderTiles","args":["CartoDB.DarkMatter","cartoid","carto",{"interactive":true,"className":"","pane":"left"}]},{"method":"addCircleMarkers","args":[[49.71979,49.884051,49.502098,49.274716,49.861905,49.794334,49.701477,49.067436,49.070292,49.77994,49.060542,49.561804,49.595108,49.602554,49.72581],[10.889217,11.228988,10.416021,10.928096,11.291932,11.509409,11.163238,10.34418,10.316987,11.186931,10.965571,11.368508,11.009011,11.005049,11.059662],10,null,"blue",{"interactive":true,"className":"","pane":"left","stroke":true,"color":"blue","weight":5,"opacity":0.5,"fill":true,"fillColor":"blue","fillOpacity":0.2},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[49.72581,49.7202,49.644533,49.645651,49.615866,49.50683],[11.059662,11.056749,11.252699,11.248618,10.630027,11.428338],10,null,"yellow",{"interactive":true,"className":"","stroke":true,"color":"yellow","weight":5,"opacity":0.5,"fill":true,"fillColor":"yellow","fillOpacity":0.2},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[49.72581,49.7202,49.644533,49.645651,49.615866,49.50683,48.900742,49.707329,49.884229,49.677827,49.450083,49.710838,49.276265,49.554706,49.882777,49.727998],[11.059662,11.056749,11.252699,11.248618,10.630027,11.428338,11.029479,10.806113,11.267583,11.252911,11.308721,11.172792,10.685605,11.22997,11.129541,11.202701],10,null,"red",{"interactive":true,"className":"","pane":"right","stroke":true,"color":"red","weight":5,"opacity":0.5,"fill":true,"fillColor":"red","fillOpacity":0.2},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLayersControl","args":[[],["blue","red","yellow"],{"collapsed":true,"autoZIndex":true,"position":"topright"}]},{"method":"addSidebyside","args":["sidecontrols","cartoid","baseid",{"thumbSize":42,"padding":0}]}],"limits":{"lat":[48.900742,49.884229],"lng":[10.316987,11.509409]}},"evals":[],"jsHooks":[]}</script></code></pre></div>
     </div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -135,7 +146,7 @@ visible on the <strong>right</strong> side</p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
       </footer></div>

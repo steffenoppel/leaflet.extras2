@@ -19,7 +19,7 @@ L.Path"><meta name="robots" content="noindex"><!-- mathjax --><script src="https
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">leaflet.extras2</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.1.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.2.0.9000</span>
       </span>
     </div>
 
@@ -57,15 +57,15 @@ options inherited from
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">arrowheadOptions</span><span class="op">(</span>
-  yawn <span class="op">=</span> <span class="fl">60</span>,
-  size <span class="op">=</span> <span class="st">"15%"</span>,
-  frequency <span class="op">=</span> <span class="st">"allvertices"</span>,
-  proportionalToTotal <span class="op">=</span> <span class="cn">FALSE</span>,
-  offsets <span class="op">=</span> <span class="cn">NULL</span>,
-  perArrowheadOptions <span class="op">=</span> <span class="cn">NULL</span>,
-  <span class="va">...</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">arrowheadOptions</span><span class="op">(</span></span>
+<span>  yawn <span class="op">=</span> <span class="fl">60</span>,</span>
+<span>  size <span class="op">=</span> <span class="st">"15%"</span>,</span>
+<span>  frequency <span class="op">=</span> <span class="st">"allvertices"</span>,</span>
+<span>  proportionalToTotal <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  offsets <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  perArrowheadOptions <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  <span class="va">...</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -73,6 +73,8 @@ options inherited from
     <dl><dt>yawn</dt>
 <dd><p>Defines the width of the opening of the arrowhead, given in
 degrees. The larger the angle, the wider the arrowhead.</p></dd>
+
+
 <dt>size</dt>
 <dd><p>Determines the size of the arrowhead. Accepts three types of
   values:</p><ul><li><p>A string with the suffix <code>'m'</code>, i.e. <code>'500m'</code> will set the
@@ -86,6 +88,8 @@ degrees. The larger the angle, the wider the arrowhead.</p></dd>
   level. Will look strange at low zoom levels or for smaller parent vectors.
   Ideal for larger parent vectors and at higher zoom levels.</p></li>
 </ul></dd>
+
+
 <dt>frequency</dt>
 <dd><p>How many arrowheads are rendered on a polyline.</p><ul><li><p><code>'allvertices'</code> renders an arrowhead on each vertex.</p></li>
 <li><p><code>'endonly'</code> renders only one at the end.</p></li>
@@ -98,18 +102,24 @@ between each one.</p></li>
 arrowheads spaced evenly with roughly that many pixels between each,
 regardless of zoom level.</p></li>
 </ul></dd>
+
+
 <dt>proportionalToTotal</dt>
 <dd><p>Only relevant when size is given as a percent.
 Useful when frequency is set to <code>'endonly'</code>. Will render the
 arrowheads with a size proportional to the entire length of the
 multi-segmented polyline, rather than proportional to the average length of
 all the segments.</p></dd>
+
+
 <dt>offsets</dt>
 <dd><p>Enables the developer to have the arrowheads start or end at
 some offset from the start and/or end of the polyline. This option can be a list
 with `start` and `end` names. The values must be strings
 defining the size of the offset in either meters or pixels, i.e.
 <code>list('start' = '100m', 'end' = '15px')</code>.</p></dd>
+
+
 <dt>perArrowheadOptions</dt>
 <dd><p>Enables the developer to customize arrowheads on a
 one-by-one basis. Must be in the form of a function of i, which is the
@@ -117,13 +127,18 @@ index of the arrowhead as it is rendered in the loop through all
 arrowheads. Must return an options object. Cannnot
 account for <code>frequency</code> or <code>proportionalToTotal</code> from within the
 <code>perArrowheadOptions</code> callback. See the example for details.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>Additional options for arrowheads, inherited from
 <a href="https://leafletjs.com/reference-1.6.0.html#path" class="external-link">L.Path</a></p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A list of options for <code>addArrowhead</code> polylines</p>
+    
+
+<p>A list of options for <code>addArrowhead</code> polylines</p>
     </div>
     <div id="references">
     <h2>References</h2>
@@ -149,7 +164,7 @@ account for <code>frequency</code> or <code>proportionalToTotal</code> from with
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
       </footer></div>
