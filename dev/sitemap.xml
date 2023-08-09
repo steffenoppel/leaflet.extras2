@@ -127,10 +127,16 @@
     <loc>/reference/context_menuItem.html</loc>
   </url>
   <url>
+    <loc>/reference/disableContextmenu.html</loc>
+  </url>
+  <url>
     <loc>/reference/easyprintMap.html</loc>
   </url>
   <url>
     <loc>/reference/easyprintOptions.html</loc>
+  </url>
+  <url>
+    <loc>/reference/enableContextmenu.html</loc>
   </url>
   <url>
     <loc>/reference/gibs_layers.html</loc>

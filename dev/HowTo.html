@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">leaflet.extras2</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.2.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.2.1.9000</span>
       </span>
     </div>
 
@@ -52,12 +52,12 @@
 <p>The plugin <a href="https://github.com/slutske22/leaflet-arrowheads" class="external-link">leaflet-arrowheads</a> will serve as example for this tutorial.</p>
 <ol style="list-style-type: decimal"><li>
 <p>Create a <strong>new directory</strong> in <code>./inst/htmlwidgets/</code> with the prefix <code>lfx-</code> and the plugin name. This snippet will do that for you:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a> usethis<span class="op">::</span><span class="kw">use_directory</span>(<span class="st">"/inst/htmlwidgets/lfx-arrowhead"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a> usethis<span class="sc">::</span><span class="fu">use_directory</span>(<span class="st">"/inst/htmlwidgets/lfx-arrowhead"</span>)</span></code></pre></div>
 </li>
 <li>
 <p>Install the <strong>dependencies</strong> via <code>npm</code>/<code>bower</code> etc if available. If the package cannot be installed, either fork/download the plugin-repo or copy/paste the JavaScript code manually. This plugin can be installed and requires 2 dependencies. I installed them with:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a> npm install leaflet<span class="op">-</span>arrowheads <span class="op">--</span>save</span>
-<span id="cb2-2"><a href="#cb2-2"></a> npm install leaflet<span class="op">-</span>geometryutil <span class="op">--</span>save</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a> npm install leaflet<span class="sc">-</span>arrowheads <span class="sc">--</span>save</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a> npm install leaflet<span class="sc">-</span>geometryutil <span class="sc">--</span>save</span></code></pre></div>
 <p>This will add the dependencies in the directory <code>./node_modules/</code>. Find the directories with the source files and copy those into the new directory <code>lfx-arrowhead</code>. In this case the files: <strong>leaflet.geometryutil.js</strong> and <strong>leaflet-arrowheads.js</strong></p>
 </li>
 <li><p>Create a <strong>new R-file</strong> with the name of the plugin in <code>./R/</code>. In this case <code>arrowhead.R</code> or copy/paste another R-file and rename it accordingly. I copy/pasted the <code>antpath.R</code> file and search/replaced <code>antpath</code> with <code>arrowhead</code> and <code>Antpath</code> with <code>Arrowhead</code> and adapted the functions and options according to the plugin.</p></li>
@@ -89,7 +89,7 @@ If the plugin exposes several methods, you can/should write an R-function for ev
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>
