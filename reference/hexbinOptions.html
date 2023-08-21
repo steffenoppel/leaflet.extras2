@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">leaflet.extras2</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.2</span>
       </span>
     </div>
 
@@ -53,58 +53,75 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">hexbinOptions</span><span class="op">(</span>
-  duration <span class="op">=</span> <span class="fl">200</span>,
-  colorScaleExtent <span class="op">=</span> <span class="cn">NULL</span>,
-  radiusScaleExtent <span class="op">=</span> <span class="cn">NULL</span>,
-  colorRange <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#f7fbff"</span>, <span class="st">"#08306b"</span><span class="op">)</span>,
-  radiusRange <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">15</span><span class="op">)</span>,
-  pointerEvents <span class="op">=</span> <span class="st">"all"</span>,
-  resizetoCount <span class="op">=</span> <span class="cn">FALSE</span>,
-  tooltip <span class="op">=</span> <span class="st">"Count "</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">hexbinOptions</span><span class="op">(</span></span>
+<span>  duration <span class="op">=</span> <span class="fl">200</span>,</span>
+<span>  colorScaleExtent <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  radiusScaleExtent <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  colorRange <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#f7fbff"</span>, <span class="st">"#08306b"</span><span class="op">)</span>,</span>
+<span>  radiusRange <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">15</span><span class="op">)</span>,</span>
+<span>  pointerEvents <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  resizetoCount <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  tooltip <span class="op">=</span> <span class="st">"Count "</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>duration</dt>
 <dd><p>Transition duration for the hexbin layer</p></dd>
+
+
 <dt>colorScaleExtent</dt>
 <dd><p>extent of the color scale for the hexbin layer. This
 is used to override the derived extent of the color values and is specified
 as a vector of the form c(min= numeric, max= numeric). Can be a numeric
 vector or a custom <code><a href="https://rdrr.io/pkg/htmlwidgets/man/JS.html" class="external-link">JS</a></code> array, like
 (<code>JS("[40, undefined]")</code>)</p></dd>
+
+
 <dt>radiusScaleExtent</dt>
 <dd><p>This is the same exact configuration option as
 colorScaleExtent, only applied to the radius extent.</p></dd>
+
+
 <dt>colorRange</dt>
 <dd><p>Sets the range of the color scale used to fill the hexbins
 on the layer.</p></dd>
+
+
 <dt>radiusRange</dt>
 <dd><p>Sets the range of the radius scale used to size the
 hexbins on the layer.</p></dd>
+
+
 <dt>pointerEvents</dt>
 <dd><p>This value is passed directly to an element-level css
 style for pointer-events. You should only modify this config option if you
 want to change the mouse event behavior on hexbins. This will modify when
 the events are propagated based on the visibility state and/or part of the
 hexbin being hovered.</p></dd>
+
+
 <dt>resizetoCount</dt>
 <dd><p>Resizes the hexbin to the count. Default is
 <code>FALSE</code>. If set to <code>TRUE</code> it will resize based on the amount of
 underlying elements. You can also pass a custom
 <code><a href="https://rdrr.io/pkg/htmlwidgets/man/JS.html" class="external-link">JS</a></code> function.</p></dd>
+
+
 <dt>tooltip</dt>
 <dd><p>Should tooltips be displayed? If set to <code>TRUE</code>, it will
 show the amount of underlying elements. If a string is given, it will
 append the string before the count. To disable tooltips, please pass
 <code>NULL</code> or <code>FALSE</code>. You can also pass a custom
 <code><a href="https://rdrr.io/pkg/htmlwidgets/man/JS.html" class="external-link">JS</a></code> function.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A list of hexbin-specific options</p>
+    
+
+<p>A list of hexbin-specific options</p>
     </div>
     <div id="see-also">
     <h2>See also</h2>
@@ -128,7 +145,7 @@ append the string before the count. To disable tooltips, please pass
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

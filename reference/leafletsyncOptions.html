@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">leaflet.extras2</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.2</span>
       </span>
     </div>
 
@@ -53,11 +53,11 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">leafletsyncOptions</span><span class="op">(</span>
-  noInitialSync <span class="op">=</span> <span class="cn">FALSE</span>,
-  syncCursor <span class="op">=</span> <span class="cn">TRUE</span>,
-  offsetFn <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/leaflet-imports.html" class="external-link">JS</a></span><span class="op">(</span><span class="st">"function (center, zoom, refMap, tgtMap) { return center; }"</span><span class="op">)</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">leafletsyncOptions</span><span class="op">(</span></span>
+<span>  noInitialSync <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  syncCursor <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  offsetFn <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/htmlwidgets/man/JS.html" class="external-link">JS</a></span><span class="op">(</span><span class="st">"function (center, zoom, refMap, tgtMap) { return center; }"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -65,15 +65,24 @@
     <dl><dt>noInitialSync</dt>
 <dd><p>Setting to <code>TRUE</code> disables initial synchronization
 of the maps. The default is <code>FALSE</code>.</p></dd>
+
+
 <dt>syncCursor</dt>
 <dd><p>The default <code>TRUE</code> adds a circle marker on the
 synced map.</p></dd>
+
+
 <dt>offsetFn</dt>
 <dd><p>A JavaScript-function to compute an offset for the center.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A list of options for <code>addLeafletsync</code></p>
+    
+
+<p>A list of options for <code>addLeafletsync</code></p>
+
+
     </div>
     <div id="see-also">
     <h2>See also</h2>
@@ -96,7 +105,7 @@ synced map.</p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>
